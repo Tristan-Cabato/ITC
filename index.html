@@ -35,6 +35,8 @@ body {
 
   <h1 class="titles"> ITC Project </h1> <br>
   <img class="addu" src="https://images.squarespace-cdn.com/content/v1/5c76a250a568275dfaf44efb/1551588779642-Y3LUQ5AQGV6IZ65W6DW2/Ateneo-de-Davao-Logo-e1518501546893.png">
+  <br> Tristan James M. Cabato <br> 
+  Computer Science 1-B
 </head>
 
 <body>
@@ -42,39 +44,126 @@ body {
 
 <hr>    <h1 class="program"> Programs: </h1> <hr>
     <h2> Temperature Conversion </h2>
-         Fahrenheit <input id="fahn" oninput="ftoc()"> <br>
-        Celsius <input id="cel" oninput="ctof()"> 
-    <br> <h2> Income Tax Calculator </h2>    
-    <br> <h2> Factorial </h2>   
-    <br> <h2> Sum </h2>   
-    <br> <h2> Average of First N Natural Numbers </h2>   
+        Fahrenheit <input id="fahn" oninput="ftoc()" class="Numbers"> <br>
+        Celsius <input id="cel" oninput="ctof()" class="Numbers"> 
+    <h2> Feet to Meters and vice versa </h2>
+        Feet <input id="ft" oninput="ftom()" class="Numbers"> <br>
+        Meters <input id="met" oninput="mtof()" class="Numbers">
+    <br> <h2> Income Tax Calculator </h2>
+        Taxable Income <input id="input" oninput="incometax()" class="Numbers"> <br>
+        <h4 id="tax"> <em> Income Tax is: </em> </h4>
+    <br> <h2> Factorial, Sum, and Average </h2>  
+        <input id="FSA" class="Numbers" placeholder="Please input a number" oninput="temporary()"> <br>
+        <button onclick="factori()"> Find the Factorial </button>
+        <button onclick="Sum()"> Find the Sum </button>
+        <button onclick="Average()"> Find the Average </button> <br> 
+        <h4 id="temporary"> <em> The __ of __ is: <em> </h4>
     <br> <h2> Simple Payroll </h2>   
  
 </body>
 
 <script>
-
 // ------------- Temperature Conversion ---------------------- //
 function ftoc() {
-            var fahrenheit = document.getElementById("fahn").value;
-            if (fahrenheit !== "") {
-                var celsius = (fahrenheit - 32) * 5 / 9;
-                document.getElementById("cel").value = celsius.toFixed(2);
-            } else {
-                document.getElementById("cel").value = ""; 
-            }
+    var fahrenheit = document.getElementById("fahn").value;
+        if (fahrenheit !== "") {
+             var celsius = (fahrenheit - 32) * 5 / 9;
+            document.getElementById("cel").value = celsius.toFixed(2);
+        } else {
+            document.getElementById("cel").value = ""; 
         }
-        function ctof() {
-            var celsius = document.getElementById("cel").value;
-            if (celsius !== "") {
-                var fahrenheit = (celsius * 9 / 5) + 32;
-                document.getElementById("fahn").value = fahrenheit.toFixed(2); 
-            } else {
-                document.getElementById("fahn").value = "";
-            }
+    }
+function ctof() {
+    var celsius = document.getElementById("cel").value;
+        if (celsius !== "") {
+            var fahrenheit = (celsius * 9 / 5) + 32;
+            document.getElementById("fahn").value = fahrenheit.toFixed(2); 
+        } else {
+            document.getElementById("fahn").value = "";
+        }
+     }
+// ---------------- Feet to Meters ------------------------ //
+function ftom() {
+    var foot = document.getElementById("ft").value;
+        if (foot !== "") {
+            var meter = foot * 0.3048;
+            document.getElementById("met").value = meter.toFixed(2);
+        } else {
+            document.getElementById("met").value = "";
+        }
+    }
+function mtof() {
+    var meter = document.getElementById("met").value;
+        if (meter !== "") {
+            var foot = meter * 3.281;
+            document.getElementById("ft").value = foot.toFixed(2);
+        } else {
+            document.getElementById("ft").value = "";
+        }
+    }
+// ---------------- Income Tax Calculator ----------------- //
+function incometax() {
+    var income = document.getElementById("input").value;
+    var tax = 0;
+  if (income > 8000000) {
+        tax = (income - 8000000) * 0.35 + 2410000;
+    } else if (income > 2000000) {
+        tax = (income - 2000000) * 0.32 + 490000;
+    } else if (income > 800000) {
+        tax = (income - 800000) * 0.30 + 130000;
+    } else if (income > 400000) {
+        tax = (income - 400000) * 0.25 + 30000;
+    } else if (income > 250000) {
+        tax = (income - 250000) * 0.20;
+    } 
+    document.getElementById("tax").textContent = "Tax is " + tax.toFixed(2);
+  }
+// ---------- Factorial, Sum, and Average ------------------//
+        // Temporary Output //
+    function temporary() {
+        var number = document.getElementById("FSA").value;
+        document.getElementById("temporary").textContent = "The __ of " +number+ " is:";
+    }
+        // Factorial //
+    function factori() {
+     var factorial = document.getElementById("FSA").value;
+     var holder = 1;
+     var number2 = factorial;
+
+    while (factorial > 0) {
+        holder *= factorial;
+        factorial--;
+        }
+    document.getElementById("temporary").textContent = "The Factorial of " +number2+ " is: " + holder; 
+    }
+        // Sum //
+    function Sum() {
+        var sum = parseInt(document.getElementById("FSA").value);
+        var added = 0;
+        var number3 = sum;
+
+    do {
+        added += sum;
+        sum--;
+    } while (sum > 0);
+    document.getElementById("temporary").textContent = "The Sum of the first " +number3+ " numbers is: " + added;
+    }
+        // Average //
+    function Average() {
+        var avr = parseInt(document.getElementById("FSA").value);
+        var totaller = 0;
+        var number4 = avr;
+        
+    for (; avr > 0; avr--) {
+        totaller += avr;
         }
 
-// ---------------- Income Tax Calculator ----------------- //
+    var totaller = totaller / number4;
+
+    document.getElementById("temporary").textContent = "The Average of the first " +number4+ " numbers is: " +totaller.toFixed(2);
+
+    }
+// -------------- Simple Payroll ------------------- //
 </script>
 
 </html>
