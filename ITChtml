@@ -1,0 +1,92 @@
+------ HTML -----------
+
+<!doctype html>
+
+<html>
+    <head> <title> TC_Web </title>
+        <h1> <em> Test Site </em> </h1> 
+        <link rel="stylesheet" href="styles.css">
+         </head>
+
+    <script> 
+        function computesum() {
+            let a="", b="", s;
+
+            a = prompt("The first number");
+            b = prompt("The second number");
+            s = parseInt(a)+parseInt(b);
+            alert("The sum of "+a+" and "+b+" is "+s);
+        }
+    </script>
+
+    <body>
+        <img class="cat" src="https://i.pinimg.com/736x/6c/1d/af/6c1dafcfe4a3bc87d6be1ce945de77f5.jpg" height="200" width="200">
+        <h2> Insane Cat picture </h2> <br>
+        <p> Random Button Below I think </p> <br>
+        <button> Cat </button> <button> Cac </button> <br>
+        <label for="tex"> ??? </label>
+        <input type="text" id="tex" value="you will never know what this box is for" disabled> </input> <br>
+        <label for="dast"> Date Input: </label>
+        <input type="datetime" id="dast" value="2024-10-29"> </input>
+
+        <br> 
+        <button onclick="computesum()"> Add 2 Numbers </button> 
+        <br>
+        <label> Is this site goated?? </label> <input type="checkbox">
+    </body>
+
+</html>
+
+--------- CSS -----------------
+
+/* Place your CSS styles in this file */
+
+h1 {
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: normal;
+}
+
+body {
+    background-color: cadetblue;
+    text-align: center;
+}
+
+.cat {
+    border-radius: 100px;
+    animation-name: spin;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; 
+}
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+button:hover {
+    background-color: aqua;
+    padding: 0 0 0 150px;
+}
+
+img:hover {
+    animation-name: bounce;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+}
+
+@keyframes bounce {
+    from {
+        transform: scaleY();
+        transform: scaleX();
+    }
+    to {
+        transform: scaleY(-500%);
+        transform: scaleX(1000%);
+    }
+}
