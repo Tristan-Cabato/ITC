@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+  
+<head> 
+  <title> tcabato </title>
+
+
+  <h1 class="titles"> Simple Computation in Javascript </h1> <br>
+
+<body>
+    <br>
+    <h2> Temperature Conversion </h2>
+        Fahrenheit <input id="fahn" oninput="ftoc()"> <br>
+        Celsius <input id="cel" oninput="ctof()"> 
+    <h2> Feet to Meters and vice versa </h2>
+        Feet <input id="ft" oninput="ftom()"> <br>
+        Meters <input id="met" oninput="mtof()">
+ 
+</body>
+
+<script>
+// ------------- Temperature Conversion ---------------------- //
+function ftoc() {
+    var fahrenheit = document.getElementById("fahn").value;
+        if (fahrenheit !== "") {
+             var celsius = (fahrenheit - 32) * 5 / 9;
+            document.getElementById("cel").value = celsius.toFixed(2);
+        } else {
+            document.getElementById("cel").value = ""; 
+        }
+    }
+function ctof() {
+    var celsius = document.getElementById("cel").value;
+        if (celsius !== "") {
+            var fahrenheit = (celsius * 9 / 5) + 32;
+            document.getElementById("fahn").value = fahrenheit.toFixed(2); 
+        } else {
+            document.getElementById("fahn").value = "";
+        }
+     }
+// ---------------- Feet to Meters ------------------------ //
+function ftom() {
+    var foot = document.getElementById("ft").value;
+        if (foot !== "") {
+            var meter = foot * 0.3048;
+            document.getElementById("met").value = meter.toFixed(2);
+        } else {
+            document.getElementById("met").value = "";
+        }
+    }
+function mtof() {
+    var meter = document.getElementById("met").value;
+        if (meter !== "") {
+            var foot = meter * 3.281;
+            document.getElementById("ft").value = foot.toFixed(2);
+        } else {
+            document.getElementById("ft").value = "";
+        }
+    }
+</script>
+
+</html>

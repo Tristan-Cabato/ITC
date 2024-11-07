@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+  
+<head> 
+  <title> tcabato </title>
+
+<hr> <h1 class="titles"> Factorial, Sum, and Average </h1> <hr>
+    <input id="FSA" class="Numbers" placeholder="Please input a number" oninput="temporary()"> <br>
+        <button onclick="factori()"> Find the Factorial </button>
+        <button onclick="Sum()"> Find the Sum </button>
+        <button onclick="Average()"> Find the Average </button> <br> 
+        <h4 id="temporary"> <em> The __ of __ is: <em> </h4>  
+
+<script>
+  // ---------- Factorial, Sum, and Average ------------------//
+        // Temporary Output //
+    function temporary() {
+        var number = document.getElementById("FSA").value;
+        document.getElementById("temporary").textContent = "The __ of " +number+ " is:";
+    }
+        // Factorial //
+    function factori() {
+     var factorial = document.getElementById("FSA").value;
+     var holder = 1;
+     var number2 = factorial;
+
+    while (factorial > 0) {
+        holder *= factorial;
+        factorial--;
+        }
+    document.getElementById("temporary").textContent = "The Factorial of " +number2+ " is: " + holder; 
+    }
+        // Sum //
+    function Sum() {
+        var sum = parseInt(document.getElementById("FSA").value);
+        var added = 0;
+        var number3 = sum;
+
+    do {
+        added += sum;
+        sum--;
+    } while (sum > 0);
+    document.getElementById("temporary").textContent = "The Sum of the first " +number3+ " numbers is: " + added;
+    }
+        // Average //
+    function Average() {
+        var avr = parseInt(document.getElementById("FSA").value);
+        var totaller = 0;
+        var number4 = avr;
+        
+    for (; avr > 0; avr--) {
+        totaller += avr;
+        }
+
+    var totaller = totaller / number4;
+
+    document.getElementById("temporary").textContent = "The Average of the first " +number4+ " numbers is: " +totaller.toFixed(2);
+
+    }
+</script>
+
+</html>
