@@ -3,30 +3,13 @@
   
 <head> 
   <title> tcabato </title>
-
-<style>
-  body {
-    text-align: center;
-  }
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 20px 0;
-}
-  table, th, td {
-    border: 1px solid black;
-    }
-  th, td {
-    padding: 10px;
-    text-align: center;
-}
-
-</style>
-
+  <link rel="stylesheet" href="taxcalc.css">
   <h1 class="titles"> Income Tax Calculator </h1> <br>
-
+</head>
+  
 <body>
-    Taxable Income <input class="numbers" placeholder="Input Taxable Income" id="input" oninput="incometax()">
+  
+    Taxable Income <input class="numbers" placeholder="Input Taxable Income" id="entry">
    <br><br><br>
    Tax Rate: <br>
    
@@ -60,30 +43,11 @@
     <td> P2,410,000 + 35% of the excess over P8,000,000</td>
   </tr>
 </table>
-   
-   
- </table>
+  
  <br><br><br> <h1 id="tax"> Tax is: </h1>
 
 </body>
 
-<script>
-  function incometax() {
-    var income = document.getElementById("input").value;
-    var tax = 0;
-  if (income > 8000000) {
-        tax = (income - 8000000) * 0.35 + 2410000;
-    } else if (income > 2000000) {
-        tax = (income - 2000000) * 0.32 + 490000;
-    } else if (income > 800000) {
-        tax = (income - 800000) * 0.30 + 130000;
-    } else if (income > 400000) {
-        tax = (income - 400000) * 0.25 + 30000;
-    } else if (income > 250000) {
-        tax = (income - 250000) * 0.20;
-    } 
-    document.getElementById("tax").textContent = "Tax is " + tax.toFixed(2);
-  }
-</script>
+<script src="taxcalc.js"> </script>
 
 </html>
