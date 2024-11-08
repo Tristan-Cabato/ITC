@@ -1,0 +1,29 @@
+.titles {
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    font-family: Impact;
+    background: white;
+    border-radius: 20%;
+    padding: 10px;
+    display: inline-block;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+table, th, td {
+    border: 1px solid black;
+    }
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+body {
+  text-align: center;
+  background-color: gray;
+}
+button:hover {
+  background-color: green;
+}
