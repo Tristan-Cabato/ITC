@@ -4,17 +4,61 @@
 <head> 
   <title> tcabato </title>
 
+<style>
+  .titles {
+    font-size: 50px;
+    font-family: Monospace, "Lucida Console";
+  }
+  body {
+    text-align: center;
+    background-color: #ece6e5;
+    background-image: linear-gradient(to left, #ffb4b4, #ffd2b4 20%, #ffeeb4);
+  }
+  input {
+    color: blue;
+    background-color: #e9e9e9;
+  }
+  h2 {
+  font-size: 20px;
+  color: blue;
+  }
+  h2:hover {
+    animation: blink 2s infinite;
+    animation: resize 1.5s ease-in forwards alternate;
+    color: blue;
+    border: solid 1px black;
+  }
+  @keyframes blink {
+  50%  {
+    opacity: 0;
+  }
+  0%, 100% {
+    opacity: 1;
+  }
+  }
+  @keyframes resize {
+    from {
+      font-size: auto;
+    }
+      to {
+      font-size: 40px;
+    }
+  }
 
-  <h1 class="titles"> Simple Computation in Javascript </h1> <br>
+</style>
+  
+  <hr> <h1 class="titles"> Simple Computation in Javascript </h1> <br> Assignment 1 <hr>
+
+</head>
 
 <body>
     <br>
     <h2> Temperature Conversion </h2>
-        Fahrenheit <input id="fahn" oninput="ftoc()"> <br>
-        Celsius <input id="cel" oninput="ctof()"> 
+        Fahrenheit <input placeholder="Input a Fahrenheit temperature" id="fahn" oninput="ftoc()"> <br>
+        Celsius <input placeholder="Input a Celsius temperature" id="cel" oninput="ctof()"> 
     <h2> Feet to Meters and vice versa </h2>
-        Feet <input id="ft" oninput="ftom()"> <br>
-        Meters <input id="met" oninput="mtof()">
+        Feet <input placeholder="Input height in feet" id="ft" oninput="ftom()"> <br>
+        Meters <input placeholder="Input height in meters" id="met" oninput="mtof()">
  
 </body>
 
