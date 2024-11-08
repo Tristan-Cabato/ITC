@@ -1,0 +1,29 @@
+body {
+  text-align: center;
+  background: #74a35c;
+  color: white;
+}
+input {
+  color: #8D54AB;
+}
+button {
+  display: inline-block;
+  width: 150px; 
+  height: 30px;  
+  transition: all 0.2s ease-in-out; 
+}
+button:hover {
+  animation: highlight 1s ease-in-out forwards alternate;
+  color: blue;
+  background-color: white;
+}
+@keyframes highlight {
+  from {
+    width: 150px;
+    height: 30px;
+  }
+  to {
+    width: 300px;
+    height: 100px;
+  }
+}
