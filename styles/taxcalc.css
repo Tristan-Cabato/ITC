@@ -1,15 +1,63 @@
-  body {
+body {
     text-align: center;
+    background-color: #bdf1ea;
 }
-  table {
+input {
+  background-color: #e7e7e7;
+}  
+table {
     width: 100%;
     border-collapse: collapse;
     margin: 20px 0;
 }
-  table, th, td {
+table, th, td {
     border: 1px solid black;
-    }
-  th, td {
+    background-color: white;
+}
+th, td {
     padding: 10px;
     text-align: center;
+}
+
+details summary {
+  background-color: #777;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+}
+
+details summary:hover {
+  background-color: #555;
+}
+
+details table {
+  width: 100%;
+  margin-top: 10px;
+  border-collapse: collapse;
+}
+
+details table, details th, details td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+}
+
+details th {
+  background-color: #f2f2f2;
+}
+
+details[open] summary {
+  background-color: #555;
+}
+
+#tax {
+  background-color: #72ff88;
+  border-radius: 13px;
+  font-weight: bold;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
