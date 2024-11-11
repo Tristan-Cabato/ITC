@@ -44,7 +44,7 @@ details table {
 details table, details th, details td {
   border: 1px solid black;
   padding: 8px;
-  text-align: left;
+  text-align: center;
 }
 
 details th {
