@@ -37,4 +37,37 @@
       font-size: 40px;
     }
   }
+  .hide {
+    display: none;
+    padding-left: 20px;
+  }
+  
+  .nav {
+    text-align: left;
+    background: orange;
+    padding: 10px;
+    border-radius: 20px;
+    display: inline-block;
+    text-decoration: none;
+    margin-right: 76%;
+    font-weight: bold;
+    color: pink;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  
+  
+  a {
+    text-decoration: none;
+    color: pink;
+  }
+  
+  a:hover {
+    color: blue;
+  }
+  
+  .others:hover .hide {
+    display: block;
+  }
+  
+
 
