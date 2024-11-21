@@ -39,7 +39,8 @@ button:hover {
   border-radius: 20px;
   display: inline-block;
   text-decoration: none;
-  margin-right: 76%;
+  margin-right: 100%;
+  white-space: nowrap;
   font-weight: bold;
   color: white;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;

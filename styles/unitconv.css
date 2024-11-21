@@ -16,22 +16,13 @@
   color: blue;
   }
   h2:hover {
-    animation: blink 2s infinite;
-    animation: resize 1.5s ease-in forwards alternate;
+    animation: resize 0.1s ease-in forwards alternate;
     color: blue;
     border: solid 1px black;
   }
-  @keyframes blink {
-  50%  {
-    opacity: 0;
-  }
-  0%, 100% {
-    opacity: 1;
-  }
-  }
   @keyframes resize {
     from {
-      font-size: auto;
+      font-size: 20px;
     }
       to {
       font-size: 40px;
@@ -47,9 +38,10 @@
     background: orange;
     padding: 10px;
     border-radius: 20px;
+    margin-right: 100%;
+    white-space: nowrap;
     display: inline-block;
     text-decoration: none;
-    margin-right: 76%;
     font-weight: bold;
     color: pink;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;

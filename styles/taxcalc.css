@@ -70,12 +70,13 @@ details[open] summary {
 
 .nav {
   text-align: left;
-  background: #1fc5e0;
+  background: orange;
   padding: 10px;
   border-radius: 20px;
+  margin-right: 100%;
+  white-space: nowrap;
   display: inline-block;
   text-decoration: none;
-  margin-right: 76%;
   font-weight: bold;
   color: greenyellow;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;

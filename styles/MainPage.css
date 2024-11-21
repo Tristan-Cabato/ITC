@@ -1,5 +1,5 @@
 .titles {
-    text-align: center; 
+    text-align: center;
     color: black;
     font-weight: bold;
     font-family: Impact;
@@ -51,16 +51,6 @@ p {
        transform: translateY(0);
    }
 }
-@keyframes resize {
-   0% {
-       font-size: auto;
-       background-color: white;
-   }
-   100% {
-       font-size: 200%;
-       background-color: teal;
-   }
-}
 @keyframes show {
    0% {
        opacity: 0%;
@@ -83,7 +73,7 @@ p {
 }
 .A1:hover #One {
     color: white;
-    animation: resize 0.3s ease-out forwards alternate;
+    background: teal;
     border-left: 5px solid white;
 }
 
@@ -98,7 +88,7 @@ p {
 }
 .A2:hover #Two {
     color: white;
-    animation: resize 0.3s ease-out forwards alternate;
+    background: teal;
     border-left: 5px solid white;
 }
 
@@ -113,7 +103,7 @@ p {
 }
 .A3:hover #Three {
     color: white;
-    animation: resize 0.3s ease-out forwards alternate;
+    background: teal;
     border-left: 5px solid white;
 }
 
@@ -128,6 +118,10 @@ p {
 }
 .A4:hover #Four {
     color: white;
-    animation: resize 0.3s ease-out forwards alternate;
+    background: teal;
     border-left: 5px solid white;
+}
+
+button:hover {
+    background-color: aqua;
 }
